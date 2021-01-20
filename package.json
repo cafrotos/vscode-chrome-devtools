@@ -1,0 +1,49 @@
+{
+  "name": "vscode-chrome-devtools",
+  "displayName": "vscode-chrome-devtools",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-chrome-devtools.openDevtools",
+    "onCommand:vscode-chrome-devtools.openDebugChrome"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-chrome-devtools.openDevtools",
+        "title": "Devtools: Open Chrome's devtools"
+      },
+      {
+        "command": "vscode-chrome-devtools.openDebugChrome",
+        "title": "Devtools: Open Chrome with debug port"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.52.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1",
+    "module-alias": "^2.2.2"
+  },
+  "_moduleDirectories": [
+    "src"
+  ]
+}
